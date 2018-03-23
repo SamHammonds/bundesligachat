@@ -15,3 +15,10 @@ function wpdocs_custom_excerpt_length( $length ) {
     return 30;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+function wpmu_burger_menu_scripts() {
+
+	wp_enqueue_script( 'burger-menu-script', get_stylesheet_directory_uri() . '/assets/scripts/burger-menu-script.js', array( 'jquery' ) );
+
+}
+add_action( 'wp_enqueue_scripts', 'wpmu_burger_menu_scripts' );

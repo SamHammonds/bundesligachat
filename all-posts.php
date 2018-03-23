@@ -21,10 +21,6 @@
              </a>
               </div>
             <?php endwhile; ?>
-            <div class="post-nav">
-              <div class="nav-previous"><?php next_posts_link( 'Older Posts' ); ?></div>
-              <div class="nav-next"><?php previous_posts_link( 'Newer Posts' ); ?></div>
-            </div>
            <?php endif; ?>
        </div>
    </div>

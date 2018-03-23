@@ -26,8 +26,10 @@
 </head>
 
 <div class="logo">
-<img src="<?php echo get_template_directory_uri() . "/assets/images/Logo.jpg"; ?>" alt="logo" />
+<img src="<?php echo get_template_directory_uri() . "/assets/images/Logo.png"; ?>" alt="logo" />
 </div>
 <body <?php body_class(); ?>>
+  <a class="burger-menu" href="#">&#9776;</a>
+  <?php get_template_part("/template-parts/burger-menu"); ?>
   <?php get_template_part("/template-parts/nav-bar"); ?>
   <div class='site-content'>

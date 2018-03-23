@@ -11,7 +11,6 @@
 			 <div class="col-sm-12">
 			 <div id="featured">
 <?php query_posts('posts_per_page=1');
-
 if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		<a href="<?php the_permalink(); ?>">
 			<div class="featured-image">
@@ -20,12 +19,12 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 		</a>
 		<h2><a href="<?php the_permalink(); ?>"><?php the_title();/*3*/ ?></a></h2>
 			<p><?php the_excerpt(); ?></p>
-			<?php endwhile; ?> <?php wp_reset_query(); /*4*/ ?>
+		<?php endwhile; ?> <?php wp_reset_query(); /*4*/ ?>
 			</div>
 		</div>
 		 		<div class="col-sm-10">
 					<div class="row">
-						<?php query_posts('posts_per_page=16&offset=1'); ?>
+						<?php query_posts('offset=1'); ?>
 							<?php if ( have_posts() ) : ?>
 							 <?php while ( have_posts() ) : the_post(); ?>
 								 <div class="col-sm-6">
@@ -45,6 +44,9 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 								 </div>
 							 <?php endwhile; ?>
 							<?php endif; ?>
+							<div class="see-all-posts">
+								<h3><a href="all-posts">See All Posts</a></h3>
+						</div>
 					</div>
 			</div>
 			<div class="col-sm-2">

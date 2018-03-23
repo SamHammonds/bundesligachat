@@ -1,7 +1,6 @@
 html, body {
   margin: 0px;
   font-family: 'Open Sans', sans-serif;
-
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -14,6 +13,10 @@ h1,h2,h3,h4,h5,h6 {
 
 .logo{
   text-align: center;
+}
+
+.logo img{
+  height: 200px;
 }
 
 .footer {
@@ -230,4 +233,87 @@ body {
 
 .nav-next a:hover{
   text-decoration: none;
+}
+
+.burger-menu{
+    display: none;
+}
+
+.burger-menu a{
+    color: #000000;
+}
+
+.actual-burger-menu{
+  display: none;
+}
+
+.see-all-posts{
+  padding: 20px;
+}
+
+.see-all-posts h3{
+  text-align: center;
+}
+
+.see-all-posts a{
+  color: black;
+  text-decoration: underline;
+}
+
+@media screen and (max-width:888px) {
+  .sidebar{
+    display: none;
+  }
+}
+
+@media screen and (max-width:800px){
+  .nav-bar{
+    display: none;
+  }
+}
+
+@media screen and (max-width:799px) {
+  .burger-menu {
+      padding: 15px;
+      margin: 0px;
+      display: inline-block;
+      color: #ffffff !important;
+      transition: color linear 0.15s;
+      width: 100%;
+  }
+
+  .burger-menu:hover, .burger-menu.active {
+      text-decoration: none;
+      color: #8D7F68;
+  }
+
+  .actual-burger-menu, .burger-menu {
+    display: block;
+    position: relative;
+    background: #000000;
+}
+
+  .actual-burger-menu ul {
+    display: none;
+	  position: absolute;
+    top: 80%;
+    left: 0px;
+    padding-left: 15px;
+    background: #000000;
+}
+
+  .actual-burger-menu li {
+    display: block;
+    float: none;
+    padding: 5px;
+  }
+
+  .actual-burger-menu li a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .actual-burger-menu {
+      z-index: 10;
+  }
 }
