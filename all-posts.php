@@ -1,5 +1,19 @@
+<?php /* Template Name: All Posts */ ?>
 <?php get_header(); ?>
+
+<?php
+  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+  $original_query = $wp_query;
+  $wp_query = null;
+  $args=array('posts_per_page'=>50, 'paged'=>$paged);
+  $wp_query = new WP_Query( $args );
+ ?>
 <div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1>All Posts</h1>
+    </div>
+  </div>
    <div class="row">
      <div class="col-sm-10">
        <div class="row">

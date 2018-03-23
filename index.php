@@ -44,8 +44,10 @@ if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 								 </div>
 							 <?php endwhile; ?>
 							<?php endif; ?>
-							<div class="see-all-posts">
-								<h3><a href="all-posts">See All Posts</a></h3>
+					</div>
+					<div class="row">
+						<div class="see-all-posts">
+							<h3><a href="<?php echo home_url() . '/all-posts';?>">See All Posts</a></h3>
 						</div>
 					</div>
 			</div>

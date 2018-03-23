@@ -26,7 +26,9 @@
 </head>
 
 <div class="logo">
-<img src="<?php echo get_template_directory_uri() . "/assets/images/Logo.png"; ?>" alt="logo" />
+  <a href="<?php echo home_url(); ?>">
+    <img src="<?php echo get_template_directory_uri() . "/assets/images/Logo.png"; ?>" alt="logo" />
+  </a>
 </div>
 <body <?php body_class(); ?>>
   <a class="burger-menu" href="#">&#9776;</a>
